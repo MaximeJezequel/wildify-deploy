@@ -3,7 +3,6 @@ import axios from "axios"
 
 import HomeArtistCard from "./HomeArtistCard"
 import HomeTrackCard from "./HomeTrackCard"
-import WildifyLogo from "./../../assets/wildify-logo.png"
 
 import "./Home.css"
 

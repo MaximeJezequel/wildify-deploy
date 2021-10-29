@@ -16,7 +16,7 @@ export default function useFavoris(category) {
 
 	useEffect(() => {
 		localStorage.setItem(category, JSON.stringify(favoris))
-	}, [favoris])
+	}, [])
 
 	return [favoris, toggleItemInLocalStorage]
 }
