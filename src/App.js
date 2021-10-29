@@ -12,7 +12,7 @@ import Navbar from "./component/Navbar/Navbar"
 import Track from "./component/Track/Track"
 import Favoris from "./component/Favoris/Favoris" //Favoris
 // import useFavoris from "./component/Favoris/useFavoris" //Favoris
-// import UserLogin from './component/User/UserLogin'
+import UserLogin from "./component/User/UserLogin"
 
 import "./App.css"
 
@@ -49,9 +49,9 @@ const App = () => {
 					<Route path="/MyLibrary">
 						<Favoris />
 					</Route>
-					{/* <Route path="/userProfile">
-            <UserLogin />
-          </Route> */}
+					<Route path="/userProfile">
+						<UserLogin />
+					</Route>
 					<Route path="/legal">
 						<Legal />
 					</Route>

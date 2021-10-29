@@ -3,19 +3,19 @@ import axios from "axios"
 
 // Envois les infos dans le back qui verifie les identifiant.
 const isLogged = () => {
-	axios
-		.post("http://localhost:3000/auth/login", {
-			userName: userName,
-			userPassword: userPassword,
-		})
-		.then((response) => {
-			if (response.data.message) {
-				setLoginStatus(response.data.message)
-			} else {
-				setLoginStatus(`${response.data.userName} is connected.`)
-				setToken(true)
-			}
-		})
+	// axios
+	// 	.post("http://localhost:3000/auth/login", {
+	// 		userName: userName,
+	// 		userPassword: userPassword,
+	// 	})
+	// 	.then((response) => {
+	// 		if (response.data.message) {
+	// 			setLoginStatus(response.data.message)
+	// 		} else {
+	// 			setLoginStatus(`${response.data.userName} is connected.`)
+	// 			setToken(true)
+	// 		}
+	// 	})
 }
 
 const handleSubmit = (e) => {
@@ -33,25 +33,25 @@ const Login = () => {
 
 	// Envois les infos dans le back qui verifie les identifiant.
 	const loginExists = () => {
-		axios
-			.post("http://localhost:3000/auth/login", {
-				userName: userName,
-				userPassword: userPassword,
-			})
-			.then((response) => {
-				if (response.data.message) {
-					setLoginStatus(response.data.message)
-				} else {
-					setLoginStatus(`${response.data.userName} is connected.`)
-				}
-			})
+		// axios
+		// 	.post("http://localhost:3000/auth/login", {
+		// 		userName: userName,
+		// 		userPassword: userPassword,
+		// 	})
+		// 	.then((response) => {
+		// 		if (response.data.message) {
+		// 			setLoginStatus(response.data.message)
+		// 		} else {
+		// 			setLoginStatus(`${response.data.userName} is connected.`)
+		// 		}
+		// 	})
 	}
 
 	return (
 		<form
 			onSubmit={(e) => {
 				e.preventDefault()
-				login()
+				// login()
 			}}
 		>
 			<h4>{loginStatus}</h4>

@@ -8,7 +8,7 @@ import imgNotFound from "../../assets/cover-wildify.png"
 
 import "./Track.css"
 
-const Track = ({ trackFavoris, toggleTrackFavoris }) => {
+const Track = () => {
 	// Params Nom de l'artiste et du track
 	const { artistName, trackName } = useParams()
 
@@ -75,12 +75,7 @@ const Track = ({ trackFavoris, toggleTrackFavoris }) => {
 			{loaderTrack ? (
 				<div>Loading...</div>
 			) : (
-				<TrackProfile
-					{...track}
-					img={imgAudioDb ? imgAudioDb : imgNotFound}
-					trackFavoris={trackFavoris}
-					toggleTrackFavoris={toggleTrackFavoris(track.mbid)}
-				/>
+				<TrackProfile {...track} img={imgAudioDb ? imgAudioDb : imgNotFound} />
 			)}
 			{/* { loaderLyric && */}
 			<div className="trackTitle">

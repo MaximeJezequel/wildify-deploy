@@ -8,7 +8,7 @@ import TrackList from "./TrackList"
 
 import "./Album.css"
 
-const Album = ({ albumFavoris, toggleAlbumFavoris }) => {
+const Album = () => {
 	const [album, setAlbum] = useState()
 	const { albumName, artistName } = useParams()
 
@@ -31,12 +31,7 @@ const Album = ({ albumFavoris, toggleAlbumFavoris }) => {
 				<div>Wait...</div>
 			) : (
 				<div>
-					<InfoAlbum
-						key={albumName}
-						infoalbum={album}
-						albumFavoris={albumFavoris}
-						toggleAlbumFavoris={toggleAlbumFavoris(album.idArtist)}
-					/>
+					<InfoAlbum key={albumName} infoalbum={album} />
 					<TrackList key={albumName} tracklist={album} />
 				</div>
 			)}

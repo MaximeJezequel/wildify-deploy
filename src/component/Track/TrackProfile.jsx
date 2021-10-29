@@ -4,17 +4,7 @@ import FavBtn from "../../assets/star-regular.svg"
 
 import "./TrackProfile.css"
 
-const TrackProfile = ({
-	artist,
-	name,
-	duration,
-	listeners,
-	img,
-	toggleTrackFavoris,
-}) => {
-	const toggleFavorite = () => {
-		toggleTrackFavoris()
-	}
+const TrackProfile = ({ artist, name, duration, listeners, img }) => {
 	const timeToSec = (time) => ((time / 1000) % 60).toFixed(0)
 
 	return (
@@ -42,9 +32,9 @@ const TrackProfile = ({
 					>
 						Liens LastFM
 					</a>
-					<button className="favoriteBtn" onClick={toggleFavorite}>
+					{/* <button className="favoriteBtn">
 						<img src={FavBtn} alt="button fav"></img>
-					</button>
+					</button> */}
 				</div>
 			</div>
 		</div>

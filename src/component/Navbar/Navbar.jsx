@@ -1,63 +1,46 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-import explore from "../../assets/search-solid.svg"
-import myLibrary from "../../assets/star-regular.svg"
-import UserProfile from "../../assets/user-regular.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { faStar } from "@fortawesome/free-regular-svg-icons"
+import { faUser } from "@fortawesome/free-regular-svg-icons"
+
 import WildifyLogo from "../../assets/wildify-logo-nav.png"
 
 import "./Navbar.css"
 
-const Navbar = () => (
-	<div className="navbar-container">
-		{/* <div className="w-logo-container">
-    <img className="Wlogo" src={WildifyLogo} alt="wildify-logo"></img>
-    <p className="logo-title">Wildify</p>
-    </div>  */}
-		<nav>
-			<NavLink className="nav-buttons" to="/">
-				<img
-					className="nav-logo"
-					src={WildifyLogo}
-					alt="home"
-					activeClassName="nav-active"
-				/>
-				<p className="nav-title">Home</p>
-			</NavLink>
-		</nav>
+const Navbar = () => {
+	return (
+		<div className="navbar-container">
+			<div className="nav-left">
+				<NavLink className="nav-button" to="/">
+					<img
+						className="nav-logo"
+						src={WildifyLogo}
+						alt="home"
+						activeClassName="nav-active"
+					/>
+					<p className="nav-btn-name">Home</p>
+				</NavLink>
+			</div>
 
-		<div className="navbar">
-			<nav>
-				<NavLink className="nav-buttons" to="/Explore">
-					<img
-						className="nav-logo"
-						src={explore}
-						alt="explore"
-						activeClassName="nav-active"
-					/>
-					<p className="nav-title">Explore</p>
+			<div className="nav-right">
+				<NavLink className="nav-button" to="/Explore">
+					<FontAwesomeIcon icon={faSearch} />
+					<p className="nav-btn-name">Explore</p>
 				</NavLink>
-				<NavLink className="nav-buttons" to="/MyLibrary">
-					<img
-						className="nav-logo"
-						src={myLibrary}
-						alt="My Library"
-						activeClassName="nav-active"
-					/>
-					<p className="nav-title">Favorites</p>
+				<NavLink className="nav-button" to="/MyLibrary">
+					<FontAwesomeIcon icon={faStar} />
+					<p className="nav-btn-name">Favorites</p>
 				</NavLink>
-				<NavLink className="nav-buttons" to="/UserProfile">
-					<img
-						className="nav-logo"
-						src={UserProfile}
-						alt="Profil"
-						activeClassName="nav-active"
-					/>
-					<p className="nav-title">My Profile</p>
+				<NavLink className="nav-button" to="/UserProfile">
+					<FontAwesomeIcon icon={faUser} />
+					<p className="nav-btn-name">My Profile</p>
 				</NavLink>
-			</nav>
+			</div>
 		</div>
-	</div>
-)
+	)
+}
 
 export default Navbar

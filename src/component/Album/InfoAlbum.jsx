@@ -1,14 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import FavBtn from "../../assets/star-regular.svg"
+// import FavBtn from "../../assets/star-regular.svg"
 
 import "./Album.css"
 
-const InfoAlbum = ({ infoalbum, toggleAlbumFavoris }) => {
-	const toggleFavorite = () => {
-		toggleAlbumFavoris()
-	}
+const InfoAlbum = ({ infoalbum }) => {
 	return (
 		<div className="info-album-bloc">
 			<div className="info-album-bloc-img">
@@ -21,9 +18,9 @@ const InfoAlbum = ({ infoalbum, toggleAlbumFavoris }) => {
 					<Link to={`/artist/${infoalbum.artist}`}>
 						<p>{infoalbum.artist}</p>
 					</Link>
-					<button className="favoriteBtn" onClick={toggleFavorite}>
+					{/* <button className="favoriteBtn" onClick={toggleFavorite}>
 						<img src={FavBtn} alt="button fav"></img>
-					</button>
+					</button> */}
 				</div>
 			</article>
 		</div>
