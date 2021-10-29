@@ -11,14 +11,14 @@ import Legal from "./component/Legal/Legal"
 import Navbar from "./component/Navbar/Navbar"
 import Track from "./component/Track/Track"
 import Favoris from "./component/Favoris/Favoris" //Favoris
-import useFavoris from "./component/Favoris/useFavoris" //Favoris
+// import useFavoris from "./component/Favoris/useFavoris" //Favoris
 // import UserLogin from './component/User/UserLogin'
 
 import "./App.css"
 
 const App = () => {
-	const [albumFavoris, toggleAlbumFavoris] = useFavoris("favAlbums")
-	const [trackFavoris, toggleTrackFavoris] = useFavoris("favTrack")
+	// const [albumFavoris, toggleAlbumFavoris] = useFavoris("favAlbums")
+	// const [trackFavoris, toggleTrackFavoris] = useFavoris("favTrack")
 
 	return (
 		<div className="appBody">
@@ -36,14 +36,14 @@ const App = () => {
 					</Route>
 					<Route path="/album/:albumName/:artistName">
 						<Album
-							albumFavoris={albumFavoris}
-							toggleAlbumFavoris={toggleAlbumFavoris}
+						// albumFavoris={albumFavoris}
+						// toggleAlbumFavoris={toggleAlbumFavoris}
 						/>
 					</Route>
 					<Route path="/track/:trackName/:artistName">
 						<Track
-							trackFavoris={trackFavoris}
-							toggleTrackFavoris={toggleTrackFavoris}
+						// trackFavoris={trackFavoris}
+						// toggleTrackFavoris={toggleTrackFavoris}
 						/>
 					</Route>
 					<Route path="/MyLibrary">
