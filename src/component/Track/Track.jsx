@@ -82,7 +82,19 @@ const Track = () => {
 				<span>Lyrics</span>
 			</div>
 			{/* } */}
-			{loaderLyric ? <div>Loading...</div> : <TrackLyrics lyrics={lyrics} />}
+			{loaderLyric ? (
+				<button>
+					<a
+						href={`https://cors-anywhere.herokuapp.com/corsdemo`}
+						target="_blank"
+						rel="noreferrer"
+					>
+						Activation temporaire des lyrics (CORS demo)
+					</a>
+				</button>
+			) : (
+				<TrackLyrics lyrics={lyrics} />
+			)}
 		</div>
 	)
 }

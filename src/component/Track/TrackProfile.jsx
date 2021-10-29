@@ -25,13 +25,15 @@ const TrackProfile = ({ artist, name, duration, listeners, img }) => {
 						{duration % 60 ? timeToSec(duration) : "00"}
 					</p>
 					<p>Nombres d'écoute : {listeners}</p>
-					<a
-						href={`https://www.last.fm/music/${artist.name}/_/${name}`}
-						target="_blank"
-						rel="noreferrer"
-					>
-						Liens LastFM
-					</a>
+					<p>
+						<a
+							href={`https://www.last.fm/music/${artist.name}/_/${name}`}
+							target="_blank"
+							rel="noreferrer"
+						>
+							Lien LastFM
+						</a>
+					</p>
 					{/* <button className="favoriteBtn">
 						<img src={FavBtn} alt="button fav"></img>
 					</button> */}
